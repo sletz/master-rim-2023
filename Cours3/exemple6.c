@@ -28,7 +28,7 @@ int main()
     int b = 20;
     
     printf("a = %d b = %d somme entière = %d\n", a, b, somme_entiere(a,b));
-    printf("c = %f c = %f somme flottante = %f\n", c, d, somme_flottant(c,d));
+    printf("c = %f d = %f somme flottante = %f\n", c, d, somme_flottant(c,d));
     
     return 0;
 }

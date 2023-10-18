@@ -30,7 +30,7 @@ int main()
     table[0] = 23.0f; 
     table[99] = 1.25765f; 
     
-    table[0] = table[0] + 10;
+    table[0] = table[0] + 10.f;
      
     printf("table[0] = %.2f table[99] = %f somme = %.2f\n", table[0], table[99], table[0]+table[99]);
     
