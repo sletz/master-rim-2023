@@ -29,9 +29,9 @@
 - ouvrir les fichiers `plugin.hpp` et `plugin.cpp` et décommenter les 2 lignes nécessaires 
 
 (To enable the module, add
-extern Model *modelMyModule;
+ `extern Model *modelMyModule; `
 to plugin.hpp, and add
-p->addModel(modelMyModule);
+ `p->addModel(modelMyModule); `
 to the init() function in plugin.cpp.)
 
 - dans le terminal taper : **make**
