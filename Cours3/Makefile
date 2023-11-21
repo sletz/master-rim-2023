@@ -1,5 +1,5 @@
  
-all: exemple1 exemple2 exemple3 exemple4 exemple5 exemple6 exemple7 exemple8 exemple9 exemple10 exercice1
+all: exemple1 exemple2 exemple3 exemple4 exemple5 exemple6 exemple7 exemple8 exemple9 exemple10 exercice1 exercice2 exercice3
 
 exemple1 : exemple1.c
 	gcc -Wall exemple1.c -o exemple1
@@ -34,5 +34,11 @@ exemple10 : exemple10.c
 exercice1 : exercice1.c
 	gcc -Wall exercice1.c -o exercice1
 
+exercice2 : exercice2.c
+	gcc -Wall exercice2.c -o exercice2
+
+exercice3 : exercice3.c
+	gcc -Wall exercice3.c -o exercice3
+
 clean:
-	rm -f exemple1 exemple2 exemple3 exemple4 exemple5 exemple6 exemple7 exemple8 exemple9 exemple10 exercice1
+	rm -f exemple1 exemple2 exemple3 exemple4 exemple5 exemple6 exemple7 exemple8 exemple9 exemple10 exercice1 exercice2 exercice3
