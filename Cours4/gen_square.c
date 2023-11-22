@@ -1,4 +1,4 @@
-
+ 
 #include <math.h>
 #include <stdlib.h>
 #include <stdio.h>
@@ -79,6 +79,12 @@ int main()
     // Simuler l'audio: génère une séquence de 500 samples
     printf("==================\n");
     printf("Simuler l'audio\n");
-    
     // A COMPLETER
+    
+    for (int i = 0; i < 500; i++) {
+        // calculer un échantillon avec 'process_one_sample_square'
+        float sample = process_one_sample_square();
+        // imprimer la valeur de l'échantillon
+        printf("Sample %f\n", sample);
+    }
 }

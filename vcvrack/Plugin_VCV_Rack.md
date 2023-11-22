@@ -40,4 +40,4 @@ to the init() function in plugin.cpp.)
 
 - dans le terminal taper : **make install** 
 
-- ouvrir l’application VCV Rack, appuyer sur la tocuhe "return" pour faire apparaitre la liste des plugins, et vérifier que le nouveau plugin apparait (il a 4 entrées de contrôle, 2 entrées audio, 2 sorties audio)
+- ouvrir l’application VCV Rack, appuyer sur la touche "return" pour faire apparaitre la liste des plugins, et vérifier que le nouveau plugin apparait (il a 4 entrées de contrôle, 2 entrées audio, 2 sorties audio)

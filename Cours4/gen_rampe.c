@@ -19,7 +19,9 @@ void init_rampe(int sample_rate, int freq)
     table_rampe = (float*)malloc(table_size_rampe * sizeof(float));
     
     /* Remplit la table */
-    // A COMPLETER
+    for (int i = 0; i < table_size_rampe; i = i + 1) {
+        table_rampe[i] = (2.f * i/(float)table_size_rampe) - 1.f;
+    }
 
     /* Initialise la phase */
     phase_rampe = 0;
@@ -34,17 +36,32 @@ void destroy_rampe()
 /* Copie 'nframes' echantillons de la table dans le buffer output et gestion de la phase */
 void process_rampe(float* output, int nframes)
 {
-    // A COMPLETER
+    int i;
+    for (i = 0; i < nframes; i++) {
+        output[i] = table_rampe[phase_rampe];
+        phase_rampe = phase_rampe + 1;
+        if (phase_rampe == table_size_rampe) {
+            phase_rampe = 0;
+        }
+    }
 }
 /* Retourne 1 echantillon et gestion de la phase */
 float process_one_sample_rampe()
 {
-    // A COMPLETER
+    float res = table_rampe[phase_rampe];
+    phase_rampe = phase_rampe + 1;
+    if (phase_rampe == table_size_rampe) {
+        phase_rampe = 0;
+    }
+    return res;
 }
 
 void display_rampe()
 {
-    // A COMPLETER
+    int i;
+    for (i = 0; i < table_size_rampe; i++) {
+        printf("Sample %f\n", table_rampe[i]);
+    }
 }
 
 int main()
@@ -56,5 +73,7 @@ int main()
     printf("==================\n");
     printf("Simuler l'audio\n");
     
-    // A COMPLETER
+    for (int i = 0; i < 500; i++) {
+        printf("Sample %f\n", process_one_sample_rampe());
+    }
 }
